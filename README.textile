@@ -1,0 +1,25 @@
+h2. Restrict Params
+
+Restrict Params is a Rails plugin which enables you to specify a finite set of keys
+which can appear in the parameters being passed to an action.
+
+h2. Why?
+
+If you use a RESTful architecture, you use the @create@ and @update@ actions to modify
+resources. Depending on the access priveliges of the application, you might want to,
+for example, allow admins to modify all attributes of a Company model, but only allow
+general users to modify the "notes" attribute.
+
+h2. Example
+
+<pre><code>class CompaniesController < ApplicationController
+  restrict_params :to => [:notes], :only => :update, :if => "!current_user.admin?"
+end</code></pre>
+
+The plugin will look at the class name of your controller and figure out that we need
+to inspect @params[:company]@. If @current_user.admin?@ is false, it will delete all items
+from @params[:company]@ except @:notes@.
+
+h2. See also
+
+There is a similar merb plugin called [FILL ME IN].
