@@ -22,4 +22,5 @@ from @params[:company]@ except @:notes@.
 
 h2. See also
 
-There is a similar merb plugin called [FILL ME IN].
+There is a similar merb plugin called
+"merb_param_protection":http://merbivore.com/documentation/merb-plugins/head/merb_param_protection/.
