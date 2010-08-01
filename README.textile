@@ -1,3 +1,7 @@
+h2. Status
+
+Use "param_protected":http://github.com/cjbottaro/param_protected instead, it's better.
+
 h2. Restrict Params
 
 Restrict Params is a Rails plugin which enables you to specify a finite set of keys
